@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo 2', cursive;
+    /* background-color: grey; */
+}
+
+nav {
+    background-color: rgb(241, 53, 210);
+    color: black;
+    height: 60px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+.gamecontainer {
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    position: relative;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    position: relative;
+}
+
+.box {
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover {
+    background-color: rgb(222, 233, 240);
+}
+
+.info {
+    font-size: 25px;
+}
+
+.gameinfo {
+    padding: 0 24px;
+}
+
+.gameinfo h1 {
+    font-size: 1.5rem;
+}
+
+.imgbox img {
+    width: 0;
+    height: 180px;
+    transition: width 1s ease-in-out;
+}
+
+.br-0 {
+    border-right: 0;
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+#reset {
+    margin: 0 60px;
+    padding: 4px 30px;
+    background-color: rgb(243, 180, 243);
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Baloo 2', cursive;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.line {
+    background-color: black;
+    width: 0;
+    height: 4px;
+    position: absolute;
+    background-color: black;
+    transition: width 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 800px) {
+    .gamecontainer {
+        flex-wrap: wrap;
+    }
+    .gameinfo {
+        margin-top: 34px;
+    }
+    .gameinfo h1 {
+        font-size: 1.5rem;
+    }
+    .container {
+        display: grid;
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+}
